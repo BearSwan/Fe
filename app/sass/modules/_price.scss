@@ -1,0 +1,100 @@
+.price {
+  padding-top: 70px;
+  padding-bottom: 170px;
+  background-color: $grey;
+
+  /*wrapper*/
+  &-wrap {
+    margin: 100px 0 0;
+  }
+
+  /*item*/
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /*heading*/
+  &-heading {
+    font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+    font-size: 22px;
+    background-color: $blue;
+    color: $white;
+    width: 100%;
+    padding: 25px 0;
+  }
+
+  /*price dollars*/
+  &-cost {
+    margin: 30px 0;
+    display: flex;
+    align-items: baseline;
+
+    /*dollar sign*/
+    &-dollar {
+      font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+      font-size: 36px;
+      align-self: center;
+      padding-bottom: 13px;
+    }
+
+    /*how much dollars*/
+    &-number {
+      font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+      font-size: 60px;
+    }
+
+    /*per month*/
+    &-month {
+      font-size: 24px;
+    }
+  }
+
+  /*else info in column*/
+  &-info {
+    font-size: 14px;
+  }
+
+  /*order now link*/
+  &-order {
+    font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $black;
+    margin-top: 55px;
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 1px solid $black;
+    border-radius: 3px;
+  }
+
+  /*free trial*/
+  &-trial {
+    margin-top: 25px;
+    font-size: 11px;
+    color: $lightgrey;
+  }
+}
+
+/*margin-top for info in column*/
+.price-info + .price-info {
+  margin-top: 20px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .price {
+
+    &-item {
+      &:nth-child(n+3) {
+        margin-top: 20px;
+      }
+    }
+
+    &-wrap {
+      margin-top: 30px;
+    }
+  }
+}

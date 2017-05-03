@@ -1,0 +1,99 @@
+.testimonials {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  /*logo*/
+  &-logo {
+    opacity: 0.3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0 50px;
+  }
+
+  /*inner wrapper*/
+  &-inner {
+    &-wrap {
+      border-radius: 4px;
+      background-color: #f7f6f4;
+      border: solid 1px #efefef;
+    }
+  }
+
+  /*text*/
+  &-text {
+    color: $lightgrey;
+    font-family: "latoitalic", 'Helvetica', 'Arial', sans-serif;
+    margin: 0 10px;
+    padding: 15px 0 30px;
+    border-bottom: 1px solid grey;
+  }
+
+  /*author*/
+  &-author {
+    margin: 0 10px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+
+    /*wrapper for authors name and link*/
+    &-wrap {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /*author-link*/
+    &_link {
+      font-size: 14px;
+      color: $blue;
+    }
+
+    /*author-name*/
+    &_name {
+      color: $lightgrey;
+      font-size: 12px;
+    }
+  }
+
+  /*styling slider slick dots*/
+  .slick-dots {
+    bottom: -70px;
+
+    li button:before {
+      border: none;
+      background-color: #cccccc;
+    }
+
+    li.slick-active button:before
+    {
+      background-color: $lightgrey;
+    }
+  }
+
+}
+
+/*testimonials-logo (images of skills)*/
+.sass {
+  width: 80px;
+}
+.less {
+  width: 120px;
+}
+.mediumrare {
+  width: 105px;
+}
+.bootstrap {
+  width: 176px;
+}
+.jquery {
+  width: 156px;
+}
+
+@media (max-width: 767px) {
+  .testimonials-logo {
+    margin-top: 0;
+  }
+}

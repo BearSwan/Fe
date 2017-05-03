@@ -1,0 +1,136 @@
+.team {
+  margin-top: -60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: {
+    image: url("../img/team-bg.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  };
+  position: relative;
+  z-index: 2;
+  color: $white;
+
+  /*wrapper*/
+  &-wrap {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  /*item*/
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(n+5) {
+      margin-top: 50px;
+    }
+  }
+
+  /*member-photo*/
+  &-member {
+    border-radius: 50%;
+    position: relative;
+
+    /*social*/
+    &-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      /*social-link*/
+      &_link {
+        color: $white;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      /*social-hover*/
+      &_wrap {
+        background-color: rgba($black, .9);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        transition: 250ms;
+      }
+    }
+
+    /*member-hover*/
+    &:hover {
+      .team-member-social_wrap {
+       opacity: 1;
+      }
+    }
+  }
+
+  /*photo-img*/
+  &-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  /*name of a team-member*/
+  &-name {
+    font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  /*position of a team-member*/
+  &-position {
+    font-size: 12px;
+    color: $green;
+  }
+
+  /*text under name*/
+  &-text {
+    max-width: 100%;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  /*blackout*/
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .6);
+    z-index: -1;
+  }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+
+  .team {
+
+    &-item {
+      &:nth-child(n+2) {
+        margin-top: 50px;
+      }
+    }
+
+    &-wrap {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

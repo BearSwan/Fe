@@ -1,0 +1,64 @@
+.review {
+  margin-top: -60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: {
+    image: url("../img/team-bg.png");
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  };
+  z-index: 2;
+  position: relative;
+  text-align: center;
+
+  /*quotes logo*/
+  &-quotes {
+    color: $blue;
+  }
+
+  /*wrapper*/
+  &-wrap {
+    margin-top: 70px;
+  }
+
+  /*review text*/
+  &-text {
+    color: $white;
+    margin-bottom: 50px;
+  }
+
+  /*author name*/
+  &-author {
+    color: $white;
+  }
+
+
+  /*blackout for background*/
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .6);
+    z-index: -1;
+  }
+
+  /*styling slider slick dots*/
+  .slick-dots {
+    bottom: -50px;
+
+    li button:before {
+      border: none;
+      background-color: #cccccc;
+    }
+    li.slick-active button:before
+    {
+      background-color: #999999;
+    }
+  }
+
+
+}

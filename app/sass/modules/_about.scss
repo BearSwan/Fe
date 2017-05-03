@@ -1,0 +1,42 @@
+.about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  /*TABS*/
+  &-tabs {
+    margin: 50px 0;
+
+    /*tabs-item*/
+    &_item {
+      padding: 20px;
+      background-color: $grey;
+      font-size: 20px;
+      text-transform: uppercase;
+      transform: skewX(-25deg);
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+
+    /*tabs-text*/
+    &_text {
+      display: block;
+      transform: skewX(25deg);
+    }
+
+    /*current tab*/
+    .current {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .about {
+    text-align: center;
+  }
+}

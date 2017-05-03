@@ -1,0 +1,60 @@
+.skills {
+  padding-top: 70px;
+  padding-bottom: 170px;
+  background-color: $grey;
+  text-align: center;
+
+  /*wrapper*/
+  &-wrap {
+    margin-top: 50px;
+  }
+
+  /*info*/
+  &-info {
+    margin-top: 30px;
+  }
+
+  /*name of skill*/
+  &-name {
+    display: block;
+    font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  /*info about skill*/
+  &-text {
+    color: $lightgrey;
+    margin-top: 15px;
+  }
+}
+
+/*CIRCLE progress bar*/
+.circle {
+  position: relative;
+
+  &-percent {
+    font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: translate(-52%,-50%);
+  }
+}
+
+/*MEDIA*/
+@media (max-width: 767px) {
+  .skills-item + .skills-item {
+    margin-top: 20px;
+  }
+  /*Circle progress bar*/
+  .circle {
+    &-percent {
+      left: 51%;
+      transform: translate(-51%, -50%);
+    }
+  }
+}
+
+

@@ -1,0 +1,15 @@
+.service {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  /*wrapper*/
+  &-wrap {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service {
+    text-align: center;
+  }
+}

@@ -1,0 +1,108 @@
+.contact {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  /*wrapper*/
+  &-wrap {
+    margin-top: 70px;
+  }
+
+  /*INFO*/
+  &-info {
+
+    /*heading*/
+    &-title {
+      text-transform: uppercase;
+      font-family: "latobold", 'Helvetica', 'Arial', sans-serif;
+      font-size: 16px;
+    }
+
+    /*text*/
+    &-text {
+      margin: 20px 0 20px;
+    }
+
+    /*item (address,phone,time,email)*/
+    &-item {
+      margin-left: 20px;
+    }
+  }
+
+  /*FORM*/
+  &-form {
+
+    /*form-input*/
+    &_input {
+      width: 100%;
+      font-size: 16px;
+      border-radius: 4px;
+      border: solid 1px $brown;
+      padding: 13px 20px;
+    }
+
+    /*form-inner-wrapper for inputs*/
+    &-inner {
+      &:nth-child(n+3) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  /*button*/
+  &-btn {
+    background-color: $blue;
+    color: $white;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  /*styling placeholder*/
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $brown;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $brown;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $brown;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $brown;
+  }
+}
+
+/*margins for address, phone, email, time*/
+.phone, .email, .time {
+  display: block;
+  margin-top: 20px;
+}
+
+/*form-message*/
+.form-message {
+  max-width: 100%;
+  height: 160px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .contact {
+
+    &-info {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    &-form-inner {
+      &:nth-child(n+2) {
+        margin-top: 10px;
+      }
+    }
+
+    &-wrap {
+      margin-top: 0;
+    }
+  }
+}

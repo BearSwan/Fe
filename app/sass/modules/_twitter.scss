@@ -1,0 +1,62 @@
+.twitter {
+  margin-top: -60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: {
+    image: url("../img/team-bg.png");
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  };
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  color: $white;
+
+  /*twitter-logo*/
+  &-logo {
+    color: $blue;
+  }
+
+  /*twits*/
+  &-twits {
+    font-size: 18px;
+  }
+
+  /*twitter-folow us link*/
+  &-follow {
+    margin-top: 60px;
+    font-size: 22px;
+
+    &_link {
+      color: $blue;
+    }
+  }
+
+  /*wrapper*/
+  &-wrap {
+    padding: 80px 0;
+  }
+
+  /*blackout for background*/
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .6);
+    z-index: -1;
+  }
+
+  /*styling slider slick dots*/
+  .slick-dots li button:before {
+    border: none;
+    background-color: #cccccc;
+  }
+  .slick-dots li.slick-active button:before
+  {
+    background-color: #999999;
+  }
+}
