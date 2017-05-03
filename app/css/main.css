@@ -431,7 +431,7 @@ ul.tabs li {
   background-size: cover;
   padding-top: 100px;
   height: 100vh;
-  min-height: 800px;
+  min-height: 700px;
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
@@ -439,8 +439,7 @@ ul.tabs li {
   /*wrap*/
   /*logo*/
   /*info*/
-  /*scroll*/
-  /*bottom white skew block*/ }
+  /*scroll*/ }
   .intro-wrap {
     display: flex;
     flex-direction: column;
@@ -474,6 +473,12 @@ ul.tabs li {
     transform: translateY(0px); }
   100% {
     transform: translateY(5px); } }
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  .intro-logo_img {
+    width: 100px;
+    height: 100px; } }
 
 .about {
   padding-top: 70px;
